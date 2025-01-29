@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:html": "node build.ts",
-    "build:css": "npx tailwindcss -m -i config.css -o docs/style.css",
+    "build:html": "node config/build.ts",
+    "build:css": "npx tailwindcss -m -i config/config.css -o docs/style.css",
     "build": "npm run build:html && npm run build:css",
     "clean": "rm docs/*"
   },
