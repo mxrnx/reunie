@@ -4,7 +4,7 @@ const handlebars = require("handlebars");
 
 // Define paths
 const srcDir = "src";
-const distDir = "dist";
+const distDir = "docs";
 const partialsDir = "src/partials";
 
 // Ensure dist directory exists

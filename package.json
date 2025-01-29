@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:html": "node build.ts",
-    "build:css": "npx tailwindcss -m -i config.css -o dist/style.css",
+    "build:css": "npx tailwindcss -m -i config.css -o docs/style.css",
     "build": "npm run build:html && npm run build:css",
-    "clean": "rm dist/*"
+    "clean": "rm docs/*"
   },
   "keywords": [],
   "author": "",
