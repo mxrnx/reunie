@@ -4,7 +4,13 @@ const handlebars = require("handlebars");
 
 // Define paths
 const srcDir = "src";
+const distDir = "dist";
 const partialsDir = "src/partials";
+
+// Ensure dist directory exists
+if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
+}
 
 // Register partials
 fs.readdirSync(partialsDir).forEach(file => {
@@ -18,9 +24,9 @@ fs.readdirSync(srcDir).forEach(file => {
     if (file.endsWith(".hbs")) {
         const template = fs.readFileSync(path.join(srcDir, file), "utf8");
         const compiled = handlebars.compile(template);
-        const output = compiled({}); // You can pass variables here if needed
+        const output = compiled({});
 
-        const outputFile = file.replace(".hbs", ".html");
+	const outputFile = path.join(distDir, file.replace(".hbs", ".html"));
         fs.writeFileSync(outputFile, output);
         console.log(`Generated: ${outputFile}`);
     }

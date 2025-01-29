@@ -7,7 +7,7 @@
     "build:html": "node build.ts",
     "build:css": "npx tailwindcss -m -i config.css -o style.css",
     "build": "npm run build:html && npm run build:css",
-    "clean": "rm *.html style.css"
+    "clean": "rm dist/*"
   },
   "keywords": [],
   "author": "",
