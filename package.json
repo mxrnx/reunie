@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "npx tailwindcss -m -i config.css -o style.css"
+    "build:html": "node build.ts",
+    "build:css": "npx tailwindcss -m -i config.css -o style.css",
+    "build": "npm run build:html && npm run build:css",
+    "clean": "rm *.html style.css"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,7 @@
     "tailwindcss": "^4.0.0"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.0"
+    "@tailwindcss/cli": "^4.0.0",
+    "handlebars": "^4.7.8"
   }
 }
