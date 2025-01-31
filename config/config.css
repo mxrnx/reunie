@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Privacy policy */
+pre {
+    white-space: pre-line;
+}
+
 #content {
 	border-image-source: url(assets/border.png);
 	border-image-slice: 200;
