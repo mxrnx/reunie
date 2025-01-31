@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+	--color-reunion-blue: #28d5e3;
+}
+
+/*@font-face {
+	font-family: "Digistick";
+	src: url(digistick.ttf) format("truetype");
+}*/
+
 /* Privacy policy */
 pre {
-    white-space: pre-line;
+	white-space: pre-line;
 }
 
 #content {
@@ -13,4 +22,14 @@ pre {
 
 	border-image-width: 80px;
 	border-image-outset: 80px;
+}
+
+/*.digistick {
+	font-family: "digistick" !important;
+}*/
+
+.prevent-select {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
