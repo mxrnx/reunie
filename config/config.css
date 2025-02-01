@@ -4,10 +4,10 @@
 	--color-reunion-blue: #28d5e3;
 }
 
-/*@font-face {
+@font-face {
 	font-family: "Digistick";
 	src: url(digistick.ttf) format("truetype");
-}*/
+}
 
 /* Privacy policy */
 pre {
@@ -24,9 +24,9 @@ pre {
 	border-image-outset: 80px;
 }
 
-/*.digistick {
+.digistick {
 	font-family: "digistick" !important;
-}*/
+}
 
 .prevent-select {
 	-webkit-user-select: none; /* Safari */
