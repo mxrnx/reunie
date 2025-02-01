@@ -1,15 +1,36 @@
 @import "tailwindcss";
 
+:root {
+	--pure-black-shadow: 0 20px 20px rgba(0,0,0,0.9);
+}
+
 @theme {
 	--color-reunion-blue: #28d5e3;
+	--color-reunion-magenta: #ff2ba0;
+	--color-reunion-yellow: #e7e000;
 }
 
+/** FONTS */
 @font-face {
 	font-family: "Digistick";
-	src: url(digistick.ttf) format("truetype");
+	src: url(fonts/digistick.ttf) format("truetype");
 }
 
-/* Privacy policy */
+.digistick {
+	font-family: "digistick" !important;
+}
+
+
+@font-face {
+	font-family: "bdfazer";
+	src: url(fonts/bdfazer.otf) format("opentype");
+}
+
+.bdfazer {
+	font-family: "bdfazer" !important;
+}
+
+/** UTILITIES */
 pre {
 	white-space: pre-line;
 }
@@ -24,12 +45,14 @@ pre {
 	border-image-outset: 80px;
 }
 
-.digistick {
-	font-family: "digistick" !important;
-}
-
 .prevent-select {
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
+}
+
+.custom-outline {
+	-webkit-text-stroke: 8px black;
+	text-stroke: 8px black;
+	paint-order: stroke fill;
 }

@@ -1,0 +1,55 @@
+<div id="countdown" class="flex place-content-around mt-6 mb-10" hidden>
+	<div class="bdfazer grid md:grid-cols-7 grid-cols-1 text-center text-5xl rounded-md bg-reunion-magenta text-white drop-shadow-(--pure-black-shadow) gap-4 pt-4 pb-2 px-6">
+		<div class="grid grid-cols-1">
+			<div id="countdownDays" class="custom-outline"> ???? </div>
+			<div class="text-xs mt-2">dagen</div>
+		</div>
+		<div class="custom-outline hidden md:inline-block">:</div>
+		<div class="grid grid-cols-1 mt-4 md:mt-0">
+			<div id="countdownHours" class="custom-outline"> ?? </div>
+			<div class="text-xs mt-2">uren</div>
+		</div>
+		<div class="custom-outline hidden md:inline-block">:</div>
+		<div class="grid grid-cols-1 mt-4 md:mt-0">
+			<div id="countdownMinutes" class="custom-outline"> ?? </div>
+			<div class="text-xs mt-2">minuten</div>
+		</div>
+		<div class="custom-outline hidden md:inline-block">:</div>
+		<div class="grid grid-cols-1 mt-4 md:mt-0">
+			<div id="countdownSeconds" class="custom-outline"> ?? </div>
+			<div class="text-xs mt-2">seconden</div>
+		</div>
+	</div>
+</div>
+
+<script language="JavaScript">
+	// Set the date we're counting down to
+	const countDownDate = new Date('Jul 4, 2025 20:00:00').getTime();
+
+	function setCountdownValues(days, hours, minutes, seconds) {
+		document.getElementById('countdownDays').innerHTML = days;
+		document.getElementById('countdownHours').innerHTML = hours;
+		document.getElementById('countdownMinutes').innerHTML = minutes;
+		document.getElementById('countdownSeconds').innerHTML = seconds;
+	};
+
+	const x = setInterval(function () {
+			const distance = countDownDate - new Date().getTime();
+
+			// Time calculations for days, hours, minutes and seconds
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			setCountdownValues(days, hours, minutes, seconds);
+
+			if (distance < 0) {
+				clearInterval(x);
+				setCountdownValues(0, 0, 0, 0);
+			}
+		}, 1000);
+
+	setTimeout(() => { document.getElementById('countdown').hidden = false; }, 1000);
+
+</script>
