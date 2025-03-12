@@ -7,7 +7,7 @@
     "build:html": "node config/build.ts",
     "build:css": "npx tailwindcss -m -i config/config.css -o docs/style.css",
     "build:static": "mkdir -p docs/form && cp src/form/index.html docs/form/index.html",
-    "build": "npm run build:html && npm run build:css",
+    "build": "npm run build:html && npm run build:css && npm run build:static",
     "clean": "rm docs/*.html docs/style.css"
   },
   "keywords": [],
