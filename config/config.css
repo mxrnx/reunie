@@ -2,6 +2,7 @@
 
 :root {
 	--pure-black-shadow: 0 20px 20px rgba(0,0,0,0.9);
+	--small-black-shadow: 0 10px 10px rgba(0,0,0,0.7);
 }
 
 @theme {
@@ -55,4 +56,8 @@ pre {
 	-webkit-text-stroke: 8px black;
 	text-stroke: 8px black;
 	paint-order: stroke fill;
+}
+
+.table-spacing {
+	border-spacing: theme("spacing.3")
 }
